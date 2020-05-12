@@ -68,6 +68,7 @@ def all_supplies_in_holidays(holiday_hash)
     holiday_result = ""
     supply_result = ""
     supply_array = []
+    supply_format = []
     puts "#{season.to_s.capitalize}:"
     data.each do |holiday, supplies|
       if holiday =~ /[_]/
