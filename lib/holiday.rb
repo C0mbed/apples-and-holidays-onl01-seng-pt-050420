@@ -101,7 +101,6 @@ def all_supplies_in_holidays(holiday_hash)
       else
         
       end
-      binding.pry
       puts "  #{holiday_result}: #{supply_result}"
     end
   end
