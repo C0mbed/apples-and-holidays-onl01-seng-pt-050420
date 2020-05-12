@@ -77,6 +77,7 @@ def all_supplies_in_holidays(holiday_hash)
         end
         holiday_result = holiday_array.join(" ")
       else
+        holiday_result = holiday
       end
         
       capitalized_supply = []
