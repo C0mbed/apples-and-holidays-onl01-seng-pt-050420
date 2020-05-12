@@ -63,8 +63,8 @@ end
 def all_holidays_with_bbq(holiday_hash)
   holidays = []
   holiday_hash.each do |season, data|
+    binding.pry
     data.each do |holiday, data|
-      binding.pry
       if data == "BBQ"
         binding.pry
       end
