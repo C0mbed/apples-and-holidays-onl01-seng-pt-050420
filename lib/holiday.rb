@@ -67,6 +67,7 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |season, data|
     holiday_result = ""
     supply_result = ""
+    supply_array = []
     puts "#{season.to_s.capitalize}:"
     data.each do |holiday, supplies|
       if holiday =~ /[_]/
@@ -81,7 +82,6 @@ def all_supplies_in_holidays(holiday_hash)
         holiday_result = holiday.capitalize
       end
         
-      capitalized_supply = []
       supplies.each do |supply|
         supply_format = []
         if supply =~ /[" "]/
@@ -92,10 +92,14 @@ def all_supplies_in_holidays(holiday_hash)
           end
           supply_result = supply_format.join(" ")
         else
-          supply_format << supply.to_s.capitalize
+          supply_array << supply.to_s.capitalize
         end
       end
-      supply_result = supply_format.join(" ")
+      if supply_result.length < 1
+        supply_result = supply_format.join(" ")
+      else
+        supply_result = supply_result.to_s
+      end
       puts "  #{holiday_result}: #{supply_result}"
     end
   end
