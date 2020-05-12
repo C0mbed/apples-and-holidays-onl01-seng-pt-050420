@@ -84,7 +84,7 @@ def all_supplies_in_holidays(holiday_hash)
         
       supplies.each do |supply|
         supply_format = []
-        if supply =~ /[" "]/
+        if supply =~ /[\s]/
           supply_array = supply.split(" ")
           supply_array.each do |word|
             binding.pry
