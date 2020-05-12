@@ -94,7 +94,8 @@ def all_supplies_in_holidays(holiday_hash)
           end
           supply_result = supply_format.join(" ")
         else
-          supply_result << supply.to_s.capitalize
+          supply_list << supply.capitalize
+          supply_result << supply.join(" ")
         end
       end
       if supply_result.length > 1
