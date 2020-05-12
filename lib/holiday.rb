@@ -92,9 +92,10 @@ def all_supplies_in_holidays(holiday_hash)
           end
           supply_result = supply_format.join(" ")
         else
-          supply_result  supply.to_s.capitalize
+          supply_format << supply.to_s.capitalize
         end
       end
+      supply_format = supply_format.join(" ")
       puts "  #{holiday_result}: #{supply_result}"
     end
   end
