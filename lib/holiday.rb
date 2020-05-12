@@ -65,9 +65,9 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
 
   holiday_hash.each do |season, data|
-    season_format = season.split("_")
-    season_result = ""
-    if season_format.length > 1
+    if season.include?("-")
+      season_format = season.split("_")
+      season_result = ""
       result_array = []
       season_format.each do |word|
         result = word.capitalize
