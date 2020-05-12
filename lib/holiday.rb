@@ -89,6 +89,7 @@ def all_supplies_in_holidays(holiday_hash)
           supply_array.each do |word|
             result = word.capitalize
             supply_format << result
+            binding.pry
           end
           supply_result = supply_format.join(" ")
         else
