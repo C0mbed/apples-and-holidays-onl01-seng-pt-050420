@@ -87,6 +87,7 @@ def all_supplies_in_holidays(holiday_hash)
         if supply =~ /[" "]/
           supply_array = supply.split(" ")
           supply_array.each do |word|
+            binding.pry
             result = word.capitalize
             supply_format << result
           end
@@ -98,7 +99,7 @@ def all_supplies_in_holidays(holiday_hash)
       if supply_result.length > 1
         supply_result = supply_result.join(" ")
       else
-        supply_result = supply_result.to_s
+        
       end
       binding.pry
       puts "  #{holiday_result}: #{supply_result}"
