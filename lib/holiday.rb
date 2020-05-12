@@ -77,12 +77,8 @@ def all_supplies_in_holidays(holiday_hash)
     else
       season_result = season.to_s.capitalize
     end
-  
-  end   
    
-   
-   season_as_a_string.gsub("-", " ")
-   puts "#{season.titleize}:"
+    puts "#{season_result}:"
    data.each do |holiday, supplies|
      capitalized_supply = []
      supplies.each do |supply|
