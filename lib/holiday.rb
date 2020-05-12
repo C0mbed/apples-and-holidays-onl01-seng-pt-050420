@@ -82,6 +82,18 @@ def all_supplies_in_holidays(holiday_hash)
         
       capitalized_supply = []
       supplies.each do |supply|
+        supply_result = ""
+        supply_format = []
+        if supply =~ " "
+          supply_array = supply.to_s.split(" ")
+          supply_array.each do |word|
+            result = word.capitalize
+            supply_format << result
+          end
+          supply_result = supply_format.join(" ")
+        else
+          supply_result = supply.to_s.join(" ")
+        end
         capitalized_supply << supply.capitalize
       end
       formatted_supplies = capitalized_supply.join(", ")
