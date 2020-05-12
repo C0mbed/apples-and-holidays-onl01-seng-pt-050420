@@ -76,6 +76,9 @@ def all_supplies_in_holidays(holiday_hash)
           holiday_array << result
         end
         holiday_result = holiday_array.join(" ")
+      else
+      end
+        
       capitalized_supply = []
       supplies.each do |supply|
         capitalized_supply << supply.capitalize
