@@ -68,6 +68,7 @@ def all_holidays_with_bbq(holiday_hash)
         holidays << data.keys
       end
     end 
+    return holidays
   end
 end
 
