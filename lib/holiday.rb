@@ -83,6 +83,7 @@ def all_supplies_in_holidays(holiday_hash)
       end
         
       supplies.each do |supply|
+        binding.pry
         supply_format = []
         if supply =~ /[\s]/
           supply_array = supply.split(" ")
