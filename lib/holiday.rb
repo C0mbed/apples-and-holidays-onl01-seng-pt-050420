@@ -66,6 +66,7 @@ def all_supplies_in_holidays(holiday_hash)
 
   holiday_hash.each do |season, data|
     if season.to_s.include?("_")
+      puts ("if statement is working")
       season_format = season.split("_")
       season_result = ""
       result_array = []
